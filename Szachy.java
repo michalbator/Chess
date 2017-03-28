@@ -1,17 +1,12 @@
 class Pionek{
 	ruch(int n, int m){
-		if(m=2){
 			show(n,m+1);
-			show(n,m+2);
-		}
-		else{
-			show(n,m+1);
-		}
+		
 	}
 }
 class Krol{
 	ruch(int n, int m){
-		if(m==0){
+		if(m == 0){
 			show(n,m+1);
 			show(n+1,m+1);
 			show(n-1,m+2);
