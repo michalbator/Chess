@@ -1,19 +1,30 @@
 package Chess;
 
 public class Board{
+	int boardRes = 8;
 	int boardSize;
-	Pawn boardTab[boardSize];
+	Pawn boardTab[];
+	
 	Board(){
-		boardTab = new Pawn[boardTab];
+		this.boardSize = boardRes*boardRes;
+		int x = 10;
+		boardTab = new Pawn[boardSize];
+		for(int i = 0; i < 64; i++){
+			boardTab[i] = new Pawn(x + i);
+		}
 	}
-	Pawn getPawn(Compass c){
-
+	Pawn getPawn(Coordinates coor){
+		return boardTab[retrive(coor)];
+	}
+	private int retrive(Coordinates coor){
+		return coor.x + boardRes*coor.y;
 	}
 }
 
 class Coordinates{
 	int x;
 	int y;
+
 	Coordinates(int x, int y){
 		this.x = x;
 		this.y = y;
@@ -21,6 +32,7 @@ class Coordinates{
 	Coordinates next(Compass c){
 		this.x += c.x;
 		this.y += c.y;
+		return this;
 	}
 }
 
@@ -43,5 +55,8 @@ enum Compass{
 	}
 }
 class Pawn{
-	Pawn();
+	public int x;
+	Pawn(int x){
+		this.x = x;
+	}
 }
