@@ -1,5 +1,5 @@
 package Chess;
-
+/*To ja Grzesiek, Michal jestes?*/
 public class Board{
 	int boardRes = 8;
 	int boardSize;
