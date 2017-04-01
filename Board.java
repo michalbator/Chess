@@ -53,6 +53,7 @@ enum Compass{
 		this.y = y;
 	}
 }
+
 class Pawn{
 	public int x;
 	Pawn(int x){
