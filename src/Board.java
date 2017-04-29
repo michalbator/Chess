@@ -13,9 +13,9 @@ public class Board{
 		}
 	}
 	Pawn getPawn(Coordinates coor){
-		return boardTab[retrive(coor)];
+		return boardTab[retrieve(coor)];
 	}
-	private int retrive(Coordinates coor){
+	private int retrieve(Coordinates coor){
 		return coor.x + boardRes*coor.y;
 	}
 }
